@@ -1,0 +1,24 @@
+@use "utilities" as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+	// scroll-padding-top: 11em;
+}
+
+body {
+	position: relative;
+	font-family: "Quicksand", sans-serif;
+	font-size: 1.6rem;
+	font-weight: normal;
+// 	background-color: $white;
+// 	color: $black;
+}
