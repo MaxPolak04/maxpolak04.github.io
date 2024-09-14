@@ -16,9 +16,10 @@ html {
 
 body {
 	position: relative;
+	min-height: 100vh; // do wyjebania
 	font-family: "Quicksand", sans-serif;
 	font-size: 1.6rem;
-	font-weight: normal;
-// 	background-color: $white;
-// 	color: $black;
+	// font-weight: normal;
+	background-color: $black;
+	color: $white;
 }

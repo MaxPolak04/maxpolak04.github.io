@@ -1,0 +1,57 @@
+@use './colors' as *;
+@use './mixins' as *;
+
+.nav {
+    
+    .navbar {
+        @include nav;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 3em;
+        background-color: $red;
+    }
+    
+    &__brand {
+        display: inline-block;
+        text-decoration: none;
+        width: 2em;
+        margin: 0 1em;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3em;
+        padding: .3em;
+        margin: 0.3em .5em;
+        border: none;
+        background: none;
+        color: $white;
+        cursor: pointer;
+
+        // &-burger {
+
+        // }
+    }
+
+    &__mobile {
+        display: flex;
+        display: none;
+    }
+
+    &__desktop {
+        display: none;
+    }
+
+    &__img {
+        &-mobile {
+            width: 100%;
+        }
+
+        // &-desktop {
+        //     // width: 10px;
+        // }
+    }
+}
