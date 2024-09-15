@@ -1,0 +1,16 @@
+@use './colors' as *;
+@use './mixins' as *;
+
+
+.hero-img {
+	top: 6em;
+    height: 100vh;
+	@include heroImg('../../../dist/img/hero-img.jpg');
+    background-position: top;
+    background-attachment: fixed;
+	overflow: hidden;
+
+	&__shadow {
+		@include shadowImg;
+	}
+}
