@@ -3,8 +3,8 @@
 
 
 .hero-img {
-	top: 6em;
-    height: 100vh;
+	top: 5em;
+    height: calc(100vh - 5em);
 	@include heroImg('../../../dist/img/hero-img.jpg');
     background-position: top;
     background-attachment: fixed;
@@ -12,5 +12,91 @@
 
 	&__shadow {
 		@include shadowImg;
+	}
+
+	&__content {
+		position: absolute;
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		grid-template-rows: repeat(12, 1fr);
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		color: $white;
+		z-index: 1;
+	}
+	
+	&__header {
+		position: relative;
+		grid-column: 2/-2;
+		grid-row: 4/5;
+		align-content: flex-end;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 3rem;
+
+		&::before {
+			position: absolute;
+			top: -.2em;
+			left: -.5em;
+			width: 2px;
+			height: 150%;
+			border-radius: 3px;
+			// transform: scaleY(0);
+			background-color: $white;
+			transition: transform 0.3s;
+			content: "";
+		}
+	}
+	
+	&__text {
+		grid-column: 2/-1;
+		grid-row: 5/6;
+		font-weight: 300;
+		font-size: 2.5rem;
+	}
+}
+
+// @media (width >= 576px) {
+// 	.hero-img {
+	// 	}
+	// }
+	
+@media (width >= 768px) {
+	.hero-img {
+		&__header {
+			&::before {
+				height: 200%;
+			}
+		}
+	}
+}
+
+@media (width >= 992px) {
+	.hero-img {
+		top: 6em;
+		height: calc(100vh - 6em);
+
+		&__header {
+			font-size: 3.5rem;
+		}
+	}
+}
+
+@media (width >= 1400px) {
+	.hero-img {
+		&__content {
+			grid-template-columns: repeat(24, 1fr);
+		}
+
+		&__header {
+			grid-column: 3/-3;
+			font-size: 4rem;
+		}
+
+		&__text {
+			grid-column: 3/-3;
+		}
 	}
 }
