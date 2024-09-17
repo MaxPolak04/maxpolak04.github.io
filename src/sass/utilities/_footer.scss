@@ -1,0 +1,13 @@
+@use './colors' as *;
+@use './mixins' as *;
+
+.footer {
+    background-color: $black;
+
+    &__copyrights {
+		margin: 2em;
+		text-align: center;
+		font-size: 1rem;
+		color: $white;
+	}
+}

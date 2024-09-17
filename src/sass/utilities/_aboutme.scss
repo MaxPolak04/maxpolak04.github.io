@@ -1,0 +1,44 @@
+@use './colors' as *;
+@use './mixins' as *;
+
+.aboutme {
+    &__img {
+        width: 100%;
+        // border-radius: 50%;
+    }
+
+    // &__box {
+    //     position: absolute;
+    // }
+
+    &__heading {
+        text-align: center;
+        font-weight: 300;
+        font-size: 2rem;
+    }
+
+    &__text {
+        width: 100%;
+        text-align: justify;
+    }
+
+    // &__paragraph {
+    //     // display: block;
+    //     // margin: 0 auto;
+    // }
+
+    &__socialmedia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        &-link {
+            display: block;
+            width: 500px;
+        }
+
+        &-img {
+            width: 100%;
+        }
+    }
+}

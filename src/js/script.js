@@ -1,3 +1,4 @@
+const footerYear = document.querySelector('.footer__year')
 const burgerBtn = document.querySelector('.nav__btn-burger')
 const xBtn = document.querySelector('.nav__btn-x')
 const navMobile = document.querySelector('.nav__mobile')
@@ -12,6 +13,13 @@ const handleNav = () => {
         })
     })
 }
+
+const handleCurrentYear = () => {
+    const year = new Date().getFullYear()
+    footerYear.innerText = year
+}
+
+handleCurrentYear()
 
 burgerBtn.addEventListener('click', handleNav)
 xBtn.addEventListener('click', handleNav)
