@@ -11,3 +11,11 @@
 		color: $white;
 	}
 }
+
+@media (width >= 992px) {
+	.footer {
+		&__copyrights {
+			font-size: 1.5rem;
+		}
+	}
+}
