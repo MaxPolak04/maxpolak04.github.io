@@ -2,9 +2,16 @@
 @use './mixins' as *;
 
 .aboutme {
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
     &__img {
-        width: 100%;
-        // border-radius: 50%;
+        width: 20em;
+        border-radius: 50%;
     }
 
     // &__box {
@@ -12,6 +19,7 @@
     // }
 
     &__heading {
+        margin: 1em 0;
         text-align: center;
         font-weight: 300;
         font-size: 2rem;
@@ -22,19 +30,20 @@
         text-align: justify;
     }
 
-    // &__paragraph {
-    //     // display: block;
-    //     // margin: 0 auto;
-    // }
+    &__paragraph {
+        margin-top: 1.5em;
+    }
 
     &__socialmedia {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 1em 0;
         
         &-link {
             display: block;
-            width: 500px;
+            width: 3em;
+            margin: 0 .5em;
         }
 
         &-img {
