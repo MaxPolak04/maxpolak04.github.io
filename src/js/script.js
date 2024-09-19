@@ -12,7 +12,19 @@ const handleNav = () => {
             navMobile.classList.remove('nav__mobile--active')
         })
     })
+    
+    handleNavItemsAnimation();
 }
+
+const handleNavItemsAnimation = () => {
+	let delayTime = 0;
+
+	navLinks.forEach((item) => {
+		item.classList.toggle("nav-items-animation");
+		item.style.animationDelay = "." + delayTime + "s";
+		delayTime++;
+	});
+};
 
 const handleCurrentYear = () => {
     const year = new Date().getFullYear()

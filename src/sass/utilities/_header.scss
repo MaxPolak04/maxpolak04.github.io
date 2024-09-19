@@ -1,10 +1,8 @@
 @use './colors' as *;
 @use './mixins' as *;
 
-
 .hero-img {
-	top: 5em;
-    height: calc(100vh - 5em);
+	height: 100vh;
 	@include heroImg('../../../dist/img/hero-img.jpg');
     background-position: top;
     background-attachment: fixed;
@@ -30,7 +28,7 @@
 	&__header {
 		position: relative;
 		grid-column: 2/-2;
-		grid-row: 4/5;
+		grid-row: 5/6;
 		align-content: flex-end;
 		text-transform: uppercase;
 		font-weight: bold;
@@ -38,12 +36,11 @@
 
 		&::before {
 			position: absolute;
-			top: -.2em;
+			top: .1em;
 			left: -.5em;
 			width: 2px;
 			height: 150%;
 			border-radius: 3px;
-			// transform: scaleY(0);
 			background-color: $white;
 			transition: transform 0.3s;
 			content: "";
@@ -52,16 +49,11 @@
 	
 	&__text {
 		grid-column: 2/-1;
-		grid-row: 5/6;
+		grid-row: 6/7;
 		font-weight: 300;
 		font-size: 2.5rem;
 	}
 }
-
-// @media (width >= 576px) {
-// 	.hero-img {
-	// 	}
-	// }
 	
 @media (width >= 768px) {
 	.hero-img {
@@ -75,9 +67,6 @@
 
 @media (width >= 992px) {
 	.hero-img {
-		top: 6em;
-		height: calc(100vh - 6em);
-
 		&__header {
 			font-size: 3.5rem;
 		}

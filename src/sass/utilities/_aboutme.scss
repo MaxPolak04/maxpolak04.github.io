@@ -111,3 +111,26 @@
         }
     }
 }
+
+@media (width >= 1200px) {
+    .aboutme {
+        &__text {
+            max-width: none;
+        }
+
+        &__list {
+            max-width: fit-content;
+        }
+
+        &__paragraph {
+            margin-top: 3em;
+            font-size: 2rem;
+        }
+    
+        &__socialmedia {
+            &-link {
+                width: 6em;
+            }
+        }
+    }
+}

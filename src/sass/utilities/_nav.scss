@@ -8,9 +8,7 @@
         justify-content: space-between;
         align-items: center;
         height: 5em;
-        // border-bottom: 1px solid $white;
-        // box-shadow: 1px 1px $shadow;
-        background-color: $black;
+        background-color: $shadow;
     }
     
     &__brand {
@@ -71,6 +69,10 @@
 		}
     }
 
+    &-items-animation {
+        animation: navItemsAnimation .5s both;
+    }
+
     &__desktop {
         display: none;
     }
@@ -78,6 +80,16 @@
     &__img {
         width: 100%;
     }
+}
+
+@keyframes navItemsAnimation {
+	from {
+		transform: translateX(200%);
+	}
+
+	to {
+		transform: translateX(0);
+	}
 }
 
 @media (992px <= width) {
@@ -100,7 +112,7 @@
 			justify-content: space-around;
 			align-items: center;
 			height: 6em;
-			background-color: $black;
+            background-color: $shadow;
 
 			&-box {
 				display: flex;
