@@ -11,19 +11,18 @@
 html {
 	font-size: 62.5%;
 	scroll-behavior: smooth;
-	scroll-padding-top: 12em;
+	scroll-padding-top: 10em;
 }
 
 body {
 	position: relative;
+	min-height: 100vh;
 	font-family: "Quicksand", sans-serif;
 	font-size: 1.6rem;
 	background-color: $black;
 	color: $white;
 }
 
-@media (992px <= width) {
-	html {
-		scroll-padding-top: 6em;
-	}
+main {
+	min-height: 75vh;
 }
