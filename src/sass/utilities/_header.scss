@@ -31,7 +31,9 @@
 		grid-row: 5/6;
 		align-content: flex-end;
 		text-transform: uppercase;
-		font-weight: bold;
+		font-family: "Junge", cursive;
+		font-weight: 400;
+		font-style: normal;
 		font-size: 3rem;
 
 		&::before {

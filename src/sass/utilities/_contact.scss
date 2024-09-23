@@ -4,21 +4,13 @@
 
 
 .contact {
-    // &__flexbox {
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: center;
-    //     align-items: center;
-    // }
-    
     &__box {
-        @include heroImg('../../../dist/img/anvil_and_nuts_2.jpg');
+        @include heroImg('../../../dist/img/anvil_and_nuts_2_small.jpg');
         display: flex;
         flex-direction: column;
         justify-content: center;
-        // max-width: 1000px;
-        // min-height: 60vh;
         padding: 1em;
+        margin-bottom: 2em;
         align-items: center;
         border: 2px solid $white;
         border-radius: 3px;
@@ -49,13 +41,35 @@
         margin-bottom: 1em;
         font-weight: bold;
     }
+
+    &__socialmedia {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1em 0;
+        
+        &-link {
+            display: block;
+            width: 3em;
+            margin: 0 .5em;
+            transition: scale .2s;
+
+            &:hover {
+                scale: 1.1;
+            }
+        }
+
+        &-img {
+            width: 100%;
+        }
+    }
 }
 
 @media (width >= 576px) {
     .contact {
         &__box {
             width: 25em;
-            margin: 0 auto;
+            margin: 0 auto 2em;
         }
     }
 }
@@ -65,18 +79,34 @@
         &__box {
             width: 40em;
             height: 30em;
-            margin: 0 auto;
+            margin: 0 auto 3em;
+        }
+
+        &__socialmedia {
+            &-link {
+                width: 4em;
+                margin: 0 1em;
+            }
         }
     }
 }
 
 @media (width >= 992px) {
     .contact {
+        &__box {
+            @include heroImg('../../../dist/img/anvil_and_nuts_2.jpg');
+            margin-bottom: 5em;
+        }
+
         &__text { 
             &--one {
                 margin-top: 5em;
                 margin-bottom: 3em;
             }
+        }
+
+        &__socialmedia {
+            margin: 3em 0;
         }
     }
 }
@@ -86,11 +116,17 @@
         &__box {
             width: 50em;
             height: 35em;
-            margin: 0 auto;
+            margin: 0 auto 5em;
         }
 
         &__paragraph {
             margin-bottom: 3em;
+        }
+
+        &__socialmedia {
+            &-link {
+                width: 6em;
+            }
         }
     }
 }

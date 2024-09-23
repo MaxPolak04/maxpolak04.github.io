@@ -1,53 +1,205 @@
 @use './colors' as *;
 @use './mixins' as *;
 
+// .offer {
+//     &__content {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: space-evenly;
+//         align-items: center;
+//         margin-bottom: 1.5em;
+//     }
+
+//     &__box {
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+//         max-width: 40em;
+//         padding: 1em;
+//         margin: .5em 0;
+//         border: 2px solid $white;
+//         border-radius: 3px;
+
+//         &-img {
+//             width: 100%;
+//             height: 50%;
+//             border-radius: 3px;
+//         }
+
+//         &-content {
+//             display: flex;
+//             flex-direction: column;
+//             justify-content: center;
+//             align-items: center;
+//         }
+
+//         &-heading {
+//             margin: 1em 0;
+//             text-transform: uppercase;
+//             text-align: center;
+//             font-weight: 300;
+//         }
+
+//         &-text {
+//             text-align: justify;
+//         }
+
+//         &-link {
+//             display: block;
+//             padding: .5em 1em;
+//             margin: 1.5em 0 1em;
+//             border-radius: 3px;
+//             text-decoration: none;
+//             text-align: center;
+//             border: 2px solid $white;
+//             background: none;
+//             color: $white;
+//             transition: font-weight .2s, background-color .2s, color .2s;
+
+//             &:hover {
+//                 font-weight: 600;
+//                 background-color: $white;
+//                 color: $dark-grey;
+//             }
+//         }
+//     }
+// }
+
+// @media (width >= 576px) {
+//     .offer {
+//         &__box {
+//             &-heading {
+//                 margin-top: 2em;
+//             }
+
+//             &-link {
+//                 padding: 1em 2em;
+//             }
+//         }
+//     }
+// }
+
+// @media (width >= 768px) {
+//     .offer {
+//         &__box {
+//             &-heading {
+//                 font-size: 2.5rem;
+//             }
+//         }
+//     }
+// }
+
+// @media (width >= 992px) {
+//     .offer {
+//         &__content {
+//             display: grid;
+//             grid-template-columns: repeat(2, 1fr);
+//             grid-template-rows: repeat(2, 1fr);
+//             gap: 1em;
+//             margin-bottom: 3em;
+//         }
+
+//         &__box {
+//             display: grid;
+//             grid-template-columns: repeat(1, 1fr);
+//             grid-template-rows: 2;
+//             height: 100%;
+//             max-height: 60em;
+
+//             &--one {
+//                 grid-column: 1/2;
+//                 grid-row: 1/2;
+//             }
+
+//             &--two {
+//                 grid-column: 2/3;
+//                 grid-row: 1/2;
+//             }
+
+//             &--three {
+//                 grid-column: 1/2;
+//                 grid-row: 2/3;
+//             }
+
+//             &--four {
+//                 grid-column: 2/3;
+//                 grid-row: 2/3;
+//             }
+
+//             &-img {
+//                 grid-column: 1/2;
+//                 grid-row: 1/2;
+//                 height: 100%;
+//             }
+
+//             &-content {
+//                 grid-column: 1/2;
+//                 grid-row: 2/3;
+//                 display: grid;
+//                 grid-template-columns: repeat(9, 1fr);
+//                 grid-template-rows: repeat(3, 1fr);
+//             }
+
+//             &-heading {
+//                 grid-column: 1/-1;
+//                 grid-row: 1/2;
+//             }
+
+//             &-text {
+//                 grid-column: 1/-1;
+//                 grid-row: 2/3;
+//             }
+
+//             &-link {
+//                 grid-column: 4/-4;
+//                 grid-row: 3/4;
+//             }
+//         }
+//     }
+// }
+
 .offer {
     &__content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        margin-bottom: 1.5em;
-    }
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 
-    &__box {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        max-width: 40em;
-        padding: 1em;
-        margin: .5em 0;
+	&__box {
+		margin: 1em 0;
+        border: 2px solid $white;
         border-radius: 3px;
-        background-color: $dark-grey;
+		overflow: hidden;
 
-        &-img {
-            width: 100%;
-            border-radius: 3px;
-        }
+		&-img {
+			width: 100%;
+		}
 
-        &-content {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
+		&-content {
+			padding: 2em;
+			z-index: 10;
+		}
 
-        &-heading {
-            margin: 1em 0;
+		&-heading {
+			margin-bottom: 0.5em;
             text-transform: uppercase;
             text-align: center;
-            font-weight: 300;
-        }
+			font-size: 2.4rem;
+			font-weight: 300;
+		}
 
-        &-text {
-            text-align: justify;
-        }
+		&-text {
+			margin-bottom: 0.5em;
+			font-size: 1.3rem;
+		}
 
         &-link {
             display: block;
             padding: .5em 1em;
-            margin: 1.5em 0 1em;
+            margin: 1.5em auto 1em;
+            width: 50%;
             border-radius: 3px;
             text-decoration: none;
             text-align: center;
@@ -59,101 +211,58 @@
             &:hover {
                 font-weight: 600;
                 background-color: $white;
-                color: $dark-grey;
+                color: $black;
             }
         }
-    }
+	}
 }
 
 @media (width >= 576px) {
     .offer {
-        &__box {
-            &-heading {
-                margin-top: 2em;
-            }
+		&__box {
+			display: flex;
+            flex-direction: row;
+			margin: 2em 0;
+			width: 100%;
 
-            &-link {
-                padding: 1em 2em;
-            }
-        }
-    }
-}
+			&-img {
+				width: 50%;
+				height: auto;
 
-@media (width >= 768px) {
-    .offer {
-        &__box {
-            &-heading {
-                font-size: 2.5rem;
+				&--right {
+					order: 1;
+				}
+			}
+
+			&-content {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+
+			&-heading {
+				margin-bottom: 0.5em;
+				font-size: 3.6rem;
+			}
+
+            &-text {
+                text-align: justify;
             }
-        }
-    }
+		}
+	}
 }
 
 @media (width >= 992px) {
     .offer {
-        &__content {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            gap: 1em;
-            margin-bottom: 3em;
-        }
+		&__box {
+			&-img {
+				object-fit: cover;
+				height: 400px;
+			}
 
-        &__box {
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            grid-template-rows: 2;
-            height: 100%;
-            max-height: 60em;
-
-            &--one {
-                grid-column: 1/2;
-                grid-row: 1/2;
-            }
-
-            &--two {
-                grid-column: 2/3;
-                grid-row: 1/2;
-            }
-
-            &--three {
-                grid-column: 1/2;
-                grid-row: 2/3;
-            }
-
-            &--four {
-                grid-column: 2/3;
-                grid-row: 2/3;
-            }
-
-            &-img {
-                grid-column: 1/2;
-                grid-row: 1/2;
-                height: 100%;
-            }
-
-            &-content {
-                grid-column: 1/2;
-                grid-row: 2/3;
-                display: grid;
-                grid-template-columns: repeat(9, 1fr);
-                grid-template-rows: repeat(3, 1fr);
-            }
-
-            &-heading {
-                grid-column: 1/-1;
-                grid-row: 1/2;
-            }
-
-            &-text {
-                grid-column: 1/-1;
-                grid-row: 2/3;
-            }
-
-            &-link {
-                grid-column: 4/-4;
-                grid-row: 3/4;
-            }
-        }
-    }
+			&-text {
+				font-size: 1.5rem;
+			}
+		}
+	}
 }
