@@ -1,0 +1,96 @@
+@use './colors' as *;
+@use './mixins' as *;
+@use './components' as *;
+
+
+.contact {
+    // &__flexbox {
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     align-items: center;
+    // }
+    
+    &__box {
+        @include heroImg('../../../dist/img/anvil_and_nuts_2.jpg');
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        // max-width: 1000px;
+        // min-height: 60vh;
+        padding: 1em;
+        align-items: center;
+        border: 2px solid $white;
+        border-radius: 3px;
+    }
+
+    &__shadow {
+        @include shadowImg;
+        background-color: $dark-shadow;
+    }
+
+    &__minibox {
+        text-align: center;
+    }
+
+    &__text {
+        margin-bottom: 0;
+        font-size: 2rem;
+        text-transform: uppercase;
+
+        &--one {
+            margin-bottom: 1em;
+            text-align: center;
+            text-transform: capitalize;
+        }
+    }
+
+    &__paragraph {
+        margin-bottom: 1em;
+        font-weight: bold;
+    }
+}
+
+@media (width >= 576px) {
+    .contact {
+        &__box {
+            width: 25em;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (width >= 768px) {
+    .contact {
+        &__box {
+            width: 40em;
+            height: 30em;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media (width >= 992px) {
+    .contact {
+        &__text { 
+            &--one {
+                margin-top: 5em;
+                margin-bottom: 3em;
+            }
+        }
+    }
+}
+
+@media (width >= 1200px) {
+    .contact {
+        &__box {
+            width: 50em;
+            height: 35em;
+            margin: 0 auto;
+        }
+
+        &__paragraph {
+            margin-bottom: 3em;
+        }
+    }
+}
