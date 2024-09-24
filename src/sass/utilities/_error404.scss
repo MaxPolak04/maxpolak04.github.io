@@ -1,0 +1,45 @@
+@use './colors' as *;
+@use './mixins' as *;
+@use './components' as *;
+
+.error404 {
+    &__box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__img {
+        width: 100%;
+        max-width: 500px;
+        border: 2px solid $white;
+        border-radius: 50%;
+    }
+
+    &__heading {
+        margin: 1em auto;
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 300;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $red;
+        transition: color .2s;
+
+        &:hover {
+            color: $dark-red;
+        }
+    }
+}
+
+@media (width >= 992px) {
+    .error404 {
+        &__heading {
+            margin-top: 3em;
+            font-size: 3rem;
+        }
+    }
+}
