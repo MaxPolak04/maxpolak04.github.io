@@ -1,5 +1,6 @@
 @use './colors' as *;
 @use './mixins' as *;
+@use './components' as *;
 
 .nav {
     .navbar {
@@ -99,7 +100,22 @@
 		}
 
         &__brand {
-            width: 4em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            min-width: 9em;
+
+            &-img {
+                width: 50%;
+            }
+            
+            &-text {
+                margin-left: .5em;
+                margin-bottom: 0;
+                font-family: "Junge", cursive;
+                color: $white;
+            }
         }
 
 		&__mobile {
@@ -108,11 +124,15 @@
 
 		&__desktop {
 			@include nav;
-			display: flex;
-			justify-content: space-around;
-			align-items: center;
+            display: block;
 			height: 6em;
             background-color: $shadow;
+            
+            &-flex {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
 
 			&-box {
 				display: flex;
