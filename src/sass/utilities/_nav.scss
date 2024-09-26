@@ -23,7 +23,7 @@
         position: absolute;
         width: 4em;
         padding: .3em;
-        margin: 1em 1.2em;
+        margin: .5em 1.2em;
         border: none;
         background: none;
         color: $white;
@@ -95,6 +95,10 @@
 
 @media (992px <= width) {
     .nav {
+        .wrapper {
+            height: 100%;
+        }
+        
 		.navbar {
 			display: none;
 		}
@@ -132,6 +136,7 @@
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                height: 100%;
             }
 
 			&-box {
