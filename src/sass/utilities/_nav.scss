@@ -115,23 +115,8 @@
             }
             
             &-text {
-                margin-left: .5em;
-                margin-bottom: 0;
-                white-space: nowrap;
-                font-size: 2rem;
-                // width: 50em;
-                // font-family: "Junge", cursive;
-
-                // font-family: "Montserrat", sans-serif;
-                // font-family: "Playfair Display", serif;
-                font-family: "Playfair Display SC", serif;
-                // font-family: "Noto Serif", serif;
-                // font-family: "EB Garamond", serif;
-                // font-family: "Old Standard TT", serif;
-		        // font-family: "Varela Round", sans-serif;
-                // font-family: "Montserrat", sans-serif;
-                // font-size: 4rem;
-                color: $white;
+                margin-left: 0.5em;
+                width: 15em;
             }
         }
 
