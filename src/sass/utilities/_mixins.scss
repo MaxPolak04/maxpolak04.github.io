@@ -25,3 +25,12 @@
 	background-color: $shadow;
 	z-index: -1;
 }
+
+@mixin input {
+    padding: .5em;
+	width: 100%;
+    border: 2px solid $white;
+    border-radius: 3px;
+    background-color: transparent;
+    color: $white;
+}

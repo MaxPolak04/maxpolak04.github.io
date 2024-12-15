@@ -56,9 +56,10 @@
                 </a>
             </div>
             <div class="footer__box footer__box--two">
-                <h6 class="footer__box-heading"><a href="contact.html" class="footer__box-link">Kontakt</a></h6>
+                <h6 class="footer__box-heading"><a href="kontakt.html" class="footer__box-link">Kontakt</a></h6>
                 <p class="footer__box-text"><a href="tel:+48 726 888 977" target="_blank" rel="noopener" class="footer__box-link--blue">+48 726 888 977</a></p>
                 <p class="footer__box-text"><a href="mailto:kuznia.billert@gmail.com" target="_blank" rel="noopener" class="footer__box-link--blue">kuznia.billert@gmail.com</a></p>
+                <a href="polityka-prywatnosci.html" class="footer__privacy-policy">Polityka Prywatności</a>
             </div>
         </div>
         <hr/>
@@ -69,6 +70,22 @@
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- GlowCockies -->
+    <script src="https://cdn.jsdelivr.net/gh/manucaralmo/GlowCookies@3.1.8/src/glowCookies.min.js"></script>
+    <script>
+        glowCookies.start('pl', {
+            style: 3,
+            analytics: 'G-6MG6RFTD8K',
+            policyLink: './polityka-prywatnosci.html',
+            bannerBackground: '#0000009c',
+            bannerColor: '#fff',
+            acceptBtnColor: '#fff',
+            acceptBtnBackground: '#aa3848',
+            rejectBtnBackground: '#fff',
+            rejectBtnColor: '#000',
+        });
+    </script>
 
     <script src="../dist/js/script.min.js"></script>
 </body>
