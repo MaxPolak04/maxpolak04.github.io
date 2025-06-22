@@ -1,7 +1,13 @@
-# 🌐 kuzniabillert.pl – Website for Kuźnia Billert
+# 🌐 [kuzniabillert.pl](https://kuzniabillert.pl) – Website for Kuźnia Billert
+
+<p align="center">
+  <img src="assets/screenshot.png" alt="Screenshot of kuzniabillert.pl" width="100%"/>
+</p>
 
 This project is a promotional website I created for **Kuźnia Billert**, a local blacksmithing company run by my brother-in-law.  
 The goal was to build a simple and informative site that helps the company strengthen its presence online.
+
+🔗 You can view the **archived version** of this website here: [maxpolak04.github.io](https://maxpolak04.github.io/)
 
 > ⚠️ **Note:** This version of the website is no longer live. It was temporarily replaced with a quickly assembled online store, which was created independently by the business owner himself (my brother-in-law).  
 > In summer, we plan to redesign the site and build a proper e-commerce solution under this domain – possibly with a blog as well.
