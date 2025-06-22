@@ -1,7 +1,7 @@
 # 🌐 [kuzniabillert.pl](https://kuzniabillert.pl) – Website for Kuźnia Billert
 
 <p align="center">
-  <img src="assets/screenshot.png" alt="Screenshot of kuzniabillert.pl" width="100%"/>
+  <img src="assets/kuzniabillert-screenshot.png" alt="Screenshot of kuzniabillert.pl" width="100%"/>
 </p>
 
 This project is a promotional website I created for **Kuźnia Billert**, a local blacksmithing company run by my brother-in-law.  
